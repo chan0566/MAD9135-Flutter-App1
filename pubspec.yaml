@@ -23,8 +23,22 @@ flutter:
         - asset: assets/fonts/Doto-Regular.ttf
         - asset: assets/fonts/Doto-Bold.ttf
         - asset: assets/fonts/Doto-Thin.ttf
-  # assets:
-  #   - assets/fonts/
-  #   - assets/images/image1.jpg
-  #   - assets/images/image2.jpg
-  #   - assets/images/image3.jpg
+    - family: Caveat
+      fonts:
+        - asset: assets/fonts/Caveat/Caveat-Regular.ttf
+        - asset: assets/fonts/Caveat/Caveat-Bold.ttf
+        - asset: assets/fonts/Caveat/Caveat-SemiBold.ttf
+    - family: Orbitron
+      fonts:
+        - asset: assets/fonts/Orbitron/Orbitron-Regular.ttf
+        - asset: assets/fonts/Orbitron/Orbitron-Bold.ttf
+        - asset: assets/fonts/Orbitron/Orbitron-SemiBold.ttf
+    - family: Satisfy
+      fonts:
+        - asset: assets/fonts/Satisfy/Satisfy-Regular.ttf
+
+        
+  assets:
+    - assets/images/Blue-Dog.jpg
+    - assets/images/Yellow-Dog.jpg
+    - assets/images/Red-Dog.jpg
