@@ -16,54 +16,53 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Basic Layout'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8),
-          child: ListView(
-            children: [
-              SizedBox(
-                height: 400,
-                child: ListView.builder(
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Image.network(
-                          'https://placehold.co/600x400@2x.png',
-                          width: 200,
-                          height: 200),
-                    );
-                  },
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const ListTile(
-                leading: Icon(Icons.star),
-                title: Text('ListTile with Regular Font',
-                    style: TextStyle(fontFamily: 'Doto')),
-              ),
-              const ListTile(
-                leading: CircleAvatar(child: Icon(Icons.person)),
-                title: Text('ListTile with Bold Font',
-                    style: TextStyle(
-                        fontFamily: 'Doto', fontWeight: FontWeight.bold)),
-              ),
-              const ListTile(
-                leading: Icon(Icons.settings),
-                title: Text('ListTile with Italic Font',
-                    style: TextStyle(
-                        fontFamily: 'Doto', fontStyle: FontStyle.italic)),
-              ),
-              const ListTile(
-                trailing: Icon(Icons.arrow_forward),
-                title: Text('Default Device Font'),
-              ),
-              const SizedBox(height: 20), // Space between elements
-            ],
-          ),
+        body: ListView(
+          children: [
+            SizedBox(
+              height: 400,
+              child: HorizontalScroller(),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const ListTile(
+              leading: Icon(Icons.star),
+              title: Text('ListTile with Regular Font',
+                  style: TextStyle(fontFamily: 'Doto')),
+            ),
+            const ListTile(
+              leading: CircleAvatar(child: Icon(Icons.person)),
+              title: Text('ListTile with Bold Font',
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
+            const ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('ListTile with Italic Font',
+                  style: TextStyle(
+                      fontFamily: 'Doto', fontStyle: FontStyle.normal)),
+            ),
+            const ListTile(
+              trailing: Icon(Icons.arrow_forward),
+              title: Text('Default Device Font'),
+            ),
+            const SizedBox(height: 20), // Space between elements
+          ],
         ),
       ),
+    );
+  }
+
+  ListView HorizontalScroller() {
+    return ListView.builder(
+      itemCount: 3,
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Image.network('https://placehold.co/600x400@2x.png',
+              width: 200, height: 200),
+        );
+      },
     );
   }
 }

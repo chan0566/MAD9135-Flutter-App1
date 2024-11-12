@@ -1,10 +1,10 @@
-name: app_1
+name: flutter_class_project_1
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.4.3 <4.0.0'
+  sdk: ">=3.4.3 <4.0.0"
 
 dependencies:
   flutter:
@@ -17,3 +17,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Doto
+      fonts:
+        - asset: assets/fonts/Doto-Regular.ttf
+        - asset: assets/fonts/Doto-Bold.ttf
+        - asset: assets/fonts/Doto-Thin.ttf
+  # assets:
+  #   - assets/fonts/
+  #   - assets/images/image1.jpg
+  #   - assets/images/image2.jpg
+  #   - assets/images/image3.jpg
